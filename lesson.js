@@ -1,8 +1,6 @@
-var http = require('http');
+var menuElem = document.getElementById('sweeties');
+var titleElem = menuElem.querySelector('.title');
 
-http.createServer(function (req, res) {
-    res.writeHead(200, {'content-Type': 'text/plain'});
-    res.end('Hello World\n');
-}).listen(1337, "127.0.0.1");
-
-console.log('Server running at http://127.0.0.1:1337/');
+titleElem.onclick = function() {
+    menuElem.classList.toggle('open');
+};

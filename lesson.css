@@ -1,30 +1,32 @@
-                html,body{
-                    margin: 0;padding: 0;
-                    width: 100%; height: 100%;
-                }
-                .my-flex-container{
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    flex-flow: row nowrap;
-                    align-self: center;
-                    margin: auto;
-                }
-                .flex-item{
-                    margin: 10px;
-                    padding: 5px;
-                }
-                .account{
-                    position: absolute;
-                    top: 5px;
-                    right: 5px;
-                }
-                .search{
-                    position: absolute;
-                    top: 40%;
-                    left: 30%;
-                    height: 30px;
-                    width: 500px;
-                    background: black;
-                    
-                }
+html,body{
+    margin: 0;padding: 0;
+    width: 100%; height: 100%;
+}
+.menu ul {
+    margin: 0;
+    float: right;
+    position: relative;
+    list-style: none;
+    padding-left: 20px;
+    display: none;
+}
+.menu .title{
+position: relative;
+    float: right;
+    margin: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+.menu .title::before {
+    margin: 10px;
+    font-size: 80%;
+}
+.menu.open .title::before{
+    margin: 10px;
+}
+.menu.open ul {
+    position: relative;
+    float: right;
+    margin: 10px;
+    display: block;
+}
